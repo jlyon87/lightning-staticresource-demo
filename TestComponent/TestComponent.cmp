@@ -1,9 +1,9 @@
-<aura:component description="TestComponent" controller="AccountAuraService" access="global" implements="flexipage:availableForAllPageTypes" >
+<aura:component description="TestComponent" access="global" implements="flexipage:availableForAllPageTypes" >
 
 	<ltng:require scripts="{!join(',',
 		$Resource.LightningInitializer + '/lightning-initializer/index.js')}"
 		afterScriptsLoaded="{!c.scriptsLoaded}" />
-<!-- 
+<!--
 	<aura:attribute name="accounts" type="Account[]" />
  -->
 
