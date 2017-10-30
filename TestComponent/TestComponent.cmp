@@ -1,0 +1,24 @@
+<aura:component description="TestComponent" controller="AccountAuraService" access="global" implements="flexipage:availableForAllPageTypes" >
+
+	<ltng:require scripts="{!join(',',
+		$Resource.LightningInitializer + '/lightning-initializer/index.js')}"
+		afterScriptsLoaded="{!c.scriptsLoaded}" />
+<!-- 
+	<aura:attribute name="accounts" type="Account[]" />
+ -->
+
+	<aura:attribute name="status" type="String" default="...loading"/>
+	<aura:handler name="init" value="{!this}" action="{!c.init}" />
+
+	<div class="slds-grid slds-wrap slds-grid_align-center">
+		<div class="slds-size_1-of-1">
+
+			<lightning:card title="Testing Zone">
+				<div><ui:outputText value="{!v.status}" /></div>
+				<lightning:button label="Click Me" onclick="{!c.doAction}" variant="brand" />
+			</lightning:card>
+
+		</div>
+	</div>
+
+</aura:component>
